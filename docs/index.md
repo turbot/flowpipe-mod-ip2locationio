@@ -1,6 +1,23 @@
-# IP2Location Mod for Flowpipe
+---
+repository: "https://github.com/turbot/flowpipe-mod-ip2location"
+---
+
+# Flowpipe IP2Location Mod
 
 Run pipelines and use triggers for IP2Location resources.
+
+## References
+
+[ip2location.io](https://www.ip2location.io/) is an API for IP address information (e.g. location) or WHOIS data (domain registration info).
+
+[Flowpipe](https://flowpipe.io) is an open source workflow tool.
+
+[Flowpipe Mods](https://flowpipe.io/docs/reference/mod-resources#mod) are collections of `pipelines` and `triggers`.
+
+## Documentation
+
+- **[Pipelines →](https://hub.flowpipe.io/mods/turbot/ip2location/pipelines)**
+- **[Triggers →](https://hub.flowpipe.io/mods/turbot/ip2location/triggers)**
 
 ## Getting started
 
@@ -46,7 +63,7 @@ Pipelines have [input variables](https://flowpipe.io/docs/using-flowpipe/mod-var
 - Pass in a value on the command line:
 
   ```shell
-  flowpipe pipeline run get_ip --pipeline-arg api_key="12345678901A23BC4D5E6FG78HI9J101"
+  flowpipe pipeline run post_message --pipeline-arg api_key="12345678901A23BC4D5E6FG78HI9J101"
   ```
 
 These are only some of the ways you can set variables. For a full list, please see [Passing Input Variables](https://flowpipe.io/docs/using-flowpipe/mod-variables#passing-input-variables).
