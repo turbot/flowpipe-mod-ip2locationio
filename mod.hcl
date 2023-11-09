@@ -7,7 +7,7 @@ mod "ip2location" {
   categories    = ["ip2location", "library"]
 
   opengraph {
-    title       = "IP2Location Library Mod for Flowpipe"
+    title       = "IP2Location"
     description = "Run pipelines to supercharge your IP2Location workflows using Flowpipe."
     image       = "/images/flowpipe/mods/turbot/ip2location-social-graphic.png"
   }

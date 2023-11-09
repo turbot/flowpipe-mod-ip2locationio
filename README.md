@@ -1,6 +1,17 @@
-# IP2Location Mod for Flowpipe
+# IP2Location Library Mod for Flowpipe
 
-Run pipelines and use triggers for IP2Location resources.
+A collection of [Flowpipe](https://flowpipe.io) pipelines that can be used to:
+
+- Get IP location details
+- Get WHOIS information for domains
+- And more!
+
+![image](https://github.com/turbot/flowpipe-mod-ip2location/blob/main/docs/images/flowpipe_pipeline_run.png?raw=true)
+
+## Documentation
+
+- **[Pipelines →](https://hub.flowpipe.io/mods/turbot/ip2location/pipelines)**
+- **[Triggers →](https://hub.flowpipe.io/mods/turbot/ip2location/triggers)**
 
 ## Getting started
 
@@ -20,9 +31,26 @@ git clone https://github.com/turbot/flowpipe-mod-ip2location.git
 cd flowpipe-mod-ip2location
 ```
 
+### Configuration
+
+Configure your credentials:
+
+```sh
+cp flowpipe.pvars.example flowpipe.pvars
+vi flowpipe.pvars
+```
+
+It's recommended to configure credentials through [input variables](https://flowpipe.io/docs/using-flowpipe/mod-variables) by setting them in the `flowpipe.pvars` file.
+
+**Note:** Credentials can also be passed in each pipeline run with `--pipeline-args api_key=12345678901A23BC4D5E6FG78HI9J101`.
+
+Additional input variables may be defined in the mod's `variables.hcl` file that can be configured to better match your environment and requirements.
+
+Variables with defaults set do not need to be explicitly set, but it may be helpful to override them.
+
 ### Usage
 
-Start your server to get started:
+Start the Flowpipe server to get started:
 
 ```sh
 flowpipe service start
@@ -31,35 +59,36 @@ flowpipe service start
 Run a pipeline:
 
 ```sh
-flowpipe pipeline run get_ip
+flowpipe pipeline run get_ip --pipeline-arg ip_address='76.76.21.21'
 ```
 
-### Credentials
+## Passing pipeline arguments
 
-This mod uses the credentials configured in `flowpipe.pvars` or passed through `--pipeline-args api_key`.
+To pass values into pipeline [parameters](https://flowpipe.io/docs/using-flowpipe/pipeline-parameters), use the following syntax:
 
-### Configuration
+```sh
+flowpipe pipeline run get_ip --pipeline-arg ip_address='76.76.21.21'
+```
 
-Pipelines have [input variables](https://flowpipe.io/docs/using-flowpipe/mod-variables) that can be configured to better match your environment and requirements. Some variables have defaults defined in its source file, e.g., `variables.hcl`, but these can be overwritten in several ways:
+Multiple pipeline args can be passed in with separate `--pipeline-arg` flags.
 
-- Copy and rename the `flowpipe.pvars.example` file to `flowpipe.pvars`, and then modify the variable values inside that file
-- Pass in a value on the command line:
-
-  ```shell
-  flowpipe pipeline run get_ip --pipeline-arg api_key="12345678901A23BC4D5E6FG78HI9J101"
-  ```
-
-These are only some of the ways you can set variables. For a full list, please see [Passing Input Variables](https://flowpipe.io/docs/using-flowpipe/mod-variables#passing-input-variables).
+For more information on passing arguments, please see [Pipeline Args](https://flowpipe.io/docs/using-flowpipe/pipeline-arguments).
 
 ## Contributing
 
 If you have an idea for additional controls or just want to help maintain and extend this mod ([or others](https://github.com/topics/flowpipe-mod)) we would love you to join the community and start contributing.
 
-- **[Join our Slack community →](https://flowpipe.io/community/join)** and hang out with other Mod developers.
+- **[Join #flowpipe in our Slack community ](https://flowpipe.io/community/join)**
 
-Please see the [contribution guidelines](https://github.com/turbot/flowpipe/blob/main/CONTRIBUTING.md) and our [code of conduct](https://github.com/turbot/flowpipe/blob/main/CODE_OF_CONDUCT.md). All contributions are subject to the [Apache 2.0 open source license](https://github.com/turbot/flowpipe-mod-ip2location/blob/main/LICENSE).
+Please see the [contribution guidelines](https://github.com/turbot/flowpipe/blob/main/CONTRIBUTING.md) and our [code of conduct](https://github.com/turbot/flowpipe/blob/main/CODE_OF_CONDUCT.md).
 
 Want to help but not sure where to start? Pick up one of the `help wanted` issues:
 
 - [Flowpipe](https://github.com/turbot/flowpipe/labels/help%20wanted)
-- [IP2Location Mod](https://github.com/turbot/flowpipe-mod-ip2location/labels/help%20wanted)
+- [IP2Location Library Mod](https://github.com/turbot/flowpipe-mod-ip2location/labels/help%20wanted)
+
+## License
+
+This mod is licensed under the [Apache License 2.0](https://github.com/turbot/flowpipe-mod-ip2location/blob/main/LICENSE).
+
+Flowpipe is licensed under the [AGPLv3](https://github.com/turbot/flowpipe/blob/main/LICENSE).

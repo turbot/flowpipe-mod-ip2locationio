@@ -22,7 +22,7 @@ pipeline "get_whois_info" {
     }
   }
 
-  output "whois_info" {
+  output "domain" {
     description = "WHOIS information about the domain."
     value       = step.http.get_whois_info.response_body
   }

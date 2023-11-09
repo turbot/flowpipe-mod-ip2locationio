@@ -22,7 +22,7 @@ pipeline "get_ip" {
     }
   }
 
-  output "ip_details" {
+  output "ip_location" {
     description = "Detailed information about the IP address."
     value       = step.http.get_ip.response_body
   }
