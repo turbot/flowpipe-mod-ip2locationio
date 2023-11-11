@@ -5,7 +5,7 @@ pipeline "get_whois_info" {
   param "api_key" {
     type        = string
     default     = var.api_key
-    description = "API key for accessing ip2whois API."
+    description = local.api_key_param_description
   }
 
   param "domain" {

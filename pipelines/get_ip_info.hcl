@@ -1,11 +1,11 @@
-pipeline "get_ip" {
+pipeline "get_ip_info" {
   title       = "Get IP Details"
-  description = "Retrieve details of an IP address using ip2location API."
+  description = "Retrieve details of an IP address using IP2Location API."
 
   param "api_key" {
     type        = string
     default     = var.api_key
-    description = "API key for accessing ip2location API."
+    description = local.api_key_param_description
   }
 
   param "ip_address" {
@@ -13,7 +13,7 @@ pipeline "get_ip" {
     description = "The IP address to retrieve information for."
   }
 
-  step "http" "get_ip" {
+  step "http" "get_ip_info" {
     method = "get"
     url    = "https://api.ip2location.io/?key=${param.api_key}&ip=${param.ip_address}"
 
@@ -22,8 +22,8 @@ pipeline "get_ip" {
     }
   }
 
-  output "ip_location" {
+  output "ip_address" {
     description = "Detailed information about the IP address."
-    value       = step.http.get_ip.response_body
+    value       = step.http.get_ip_info.response_body
   }
 }
