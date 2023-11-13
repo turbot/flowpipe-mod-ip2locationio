@@ -6,8 +6,6 @@ A collection of [Flowpipe](https://flowpipe.io) pipelines that can be used to:
 - Get WHOIS information for domains
 - And more!
 
-![image](https://github.com/turbot/flowpipe-mod-ip2location/blob/main/docs/images/flowpipe_pipeline_run.png?raw=true)
-
 ## Documentation
 
 - **[Pipelines →](https://hub.flowpipe.io/mods/turbot/ip2location/pipelines)**
