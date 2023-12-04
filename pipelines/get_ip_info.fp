@@ -1,5 +1,5 @@
 pipeline "get_ip_info" {
-  title       = "Get IP Details"
+  title       = "Get IP Information"
   description = "Retrieve details of an IP address using IP2Location API."
 
   param "api_key" {

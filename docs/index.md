@@ -9,7 +9,6 @@ A collection of [Flowpipe](https://flowpipe.io) pipelines that can be used to:
 ## Documentation
 
 - **[Pipelines →](https://hub.flowpipe.io/mods/turbot/ip2location/pipelines)**
-- **[Triggers →](https://hub.flowpipe.io/mods/turbot/ip2location/triggers)**
 
 ## Getting started
 
@@ -42,7 +41,7 @@ It's recommended to configure credentials through [input variables](https://flow
 
 **Note:** Credentials can also be passed in each pipeline run with `--pipeline-args api_key=12345678901A23BC4D5E6FG78HI9J101`.
 
-Additional input variables may be defined in the mod's `variables.hcl` file that can be configured to better match your environment and requirements.
+Additional input variables may be defined in the mod's `variables.fp` file that can be configured to better match your environment and requirements.
 
 Variables with defaults set do not need to be explicitly set, but it may be helpful to override them.
 
@@ -57,7 +56,7 @@ flowpipe service start
 Run a pipeline:
 
 ```sh
-flowpipe pipeline run get_ip_info --pipeline-arg ip_address='76.76.21.21'
+flowpipe pipeline run get_ip_info --arg ip_address='76.76.21.21'
 ```
 
 ## Passing pipeline arguments
@@ -65,10 +64,10 @@ flowpipe pipeline run get_ip_info --pipeline-arg ip_address='76.76.21.21'
 To pass values into pipeline [parameters](https://flowpipe.io/docs/using-flowpipe/pipeline-parameters), use the following syntax:
 
 ```sh
-flowpipe pipeline run get_ip_info --pipeline-arg ip_address='76.76.21.21'
+flowpipe pipeline run get_ip_info --arg ip_address='76.76.21.21'
 ```
 
-Multiple pipeline args can be passed in with separate `--pipeline-arg` flags.
+Multiple pipeline args can be passed in with separate `--arg` flags.
 
 For more information on passing arguments, please see [Pipeline Args](https://flowpipe.io/docs/using-flowpipe/pipeline-arguments).
 
