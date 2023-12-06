@@ -2,10 +2,10 @@ pipeline "get_whois_info" {
   title       = "Get WHOIS Information"
   description = "Retrieve WHOIS information for a domain using ip2whois API."
 
-  param "api_key" {
+  param "cred" {
     type        = string
-    default     = var.api_key
-    description = local.api_key_param_description
+    description = local.cred_param_description
+    default     = "default"
   }
 
   param "domain" {
@@ -15,7 +15,7 @@ pipeline "get_whois_info" {
 
   step "http" "get_whois_info" {
     method = "get"
-    url    = "https://api.ip2whois.com/v2?key=${param.api_key}&domain=${param.domain}"
+    url    = "https://api.ip2whois.com/v2?key=${credential.ip2location[param.cred].api_key}&domain=${param.domain}"
 
     request_headers = {
       "Content-Type" = "application/json"
