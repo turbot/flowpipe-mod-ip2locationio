@@ -1,4 +1,4 @@
-# IP2Location Library Mod for Flowpipe
+# ip2location.io Library Mod for Flowpipe
 
 A collection of [Flowpipe](https://flowpipe.io) pipelines that can be used to:
 
@@ -6,7 +6,7 @@ A collection of [Flowpipe](https://flowpipe.io) pipelines that can be used to:
 - Get WHOIS information for domains
 - And more!
 
-![image](https://github.com/turbot/flowpipe-mod-ip2location/blob/main/docs/images/flowpipe_pipeline_run.png?raw=true)
+![image](https://github.com/turbot/flowpipe-mod-ip2locationio/blob/main/docs/images/flowpipe_pipeline_run.png?raw=true)
 
 ## Documentation
 
@@ -26,8 +26,8 @@ brew install flowpipe
 Clone:
 
 ```sh
-git clone https://github.com/turbot/flowpipe-mod-ip2location.git
-cd flowpipe-mod-ip2location
+git clone https://github.com/turbot/flowpipe-mod-ip2locationio.git
+cd flowpipe-mod-ip2locationio
 ```
 
 ### Configuration
@@ -84,10 +84,10 @@ Please see the [contribution guidelines](https://github.com/turbot/flowpipe/blob
 Want to help but not sure where to start? Pick up one of the `help wanted` issues:
 
 - [Flowpipe](https://github.com/turbot/flowpipe/labels/help%20wanted)
-- [IP2Location Library Mod](https://github.com/turbot/flowpipe-mod-ip2location/labels/help%20wanted)
+- [IP2Location Library Mod](https://github.com/turbot/flowpipe-mod-ip2locationio/labels/help%20wanted)
 
 ## License
 
-This mod is licensed under the [Apache License 2.0](https://github.com/turbot/flowpipe-mod-ip2location/blob/main/LICENSE).
+This mod is licensed under the [Apache License 2.0](https://github.com/turbot/flowpipe-mod-ip2locationio/blob/main/LICENSE).
 
 Flowpipe is licensed under the [AGPLv3](https://github.com/turbot/flowpipe/blob/main/LICENSE).

@@ -1,4 +1,4 @@
-# IP2Location Library Mod for Flowpipe
+# ip2location.io Library Mod for Flowpipe
 
 A collection of [Flowpipe](https://flowpipe.io) pipelines that can be used to:
 
@@ -24,8 +24,8 @@ brew install flowpipe
 Clone:
 
 ```sh
-git clone https://github.com/turbot/flowpipe-mod-ip2location.git
-cd flowpipe-mod-ip2location
+git clone https://github.com/turbot/flowpipe-mod-ip2locationio.git
+cd flowpipe-mod-ip2locationio
 ```
 
 ### Configuration
@@ -39,7 +39,7 @@ vi flowpipe.pvars
 
 It's recommended to configure credentials through [input variables](https://flowpipe.io/docs/using-flowpipe/mod-variables) by setting them in the `flowpipe.pvars` file.
 
-**Note:** Credentials can also be passed in each pipeline run with `--pipeline-args api_key=12345678901A23BC4D5E6FG78HI9J101`.
+**Note:** Credentials can also be passed in each pipeline run with `--args api_key=12345678901A23BC4D5E6FG78HI9J101`.
 
 Additional input variables may be defined in the mod's `variables.fp` file that can be configured to better match your environment and requirements.
 
@@ -82,10 +82,10 @@ Please see the [contribution guidelines](https://github.com/turbot/flowpipe/blob
 Want to help but not sure where to start? Pick up one of the `help wanted` issues:
 
 - [Flowpipe](https://github.com/turbot/flowpipe/labels/help%20wanted)
-- [IP2Location Library Mod](https://github.com/turbot/flowpipe-mod-ip2location/labels/help%20wanted)
+- [IP2Location Library Mod](https://github.com/turbot/flowpipe-mod-ip2locationio/labels/help%20wanted)
 
 ## License
 
-This mod is licensed under the [Apache License 2.0](https://github.com/turbot/flowpipe-mod-ip2location/blob/main/LICENSE).
+This mod is licensed under the [Apache License 2.0](https://github.com/turbot/flowpipe-mod-ip2locationio/blob/main/LICENSE).
 
 Flowpipe is licensed under the [AGPLv3](https://github.com/turbot/flowpipe/blob/main/LICENSE).
