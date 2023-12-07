@@ -2,6 +2,10 @@ pipeline "get_whois_info" {
   title       = "Get WHOIS Information"
   description = "Retrieve WHOIS information for a domain using ip2whois API."
 
+  tags = {
+    type = "featured"
+  }
+
   param "cred" {
     type        = string
     description = local.cred_param_description
