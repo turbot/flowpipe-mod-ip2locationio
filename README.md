@@ -21,7 +21,7 @@ brew install flowpipe
 
 By default, the following environment variables will be used for authentication:
 
-- `IP2LOCATION_API_KEY`
+- `IP2LOCATIONIO_API_KEY`
 
 You can also create `credential` resources in configuration files:
 
