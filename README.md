@@ -21,16 +21,16 @@ brew install flowpipe
 
 By default, the following environment variables will be used for authentication:
 
-- `IP2LOCATION_API_KEY`
+- `IP2LOCATIONIO_API_KEY`
 
 You can also create `credential` resources in configuration files:
 
 ```sh
-vi ~/.flowpipe/config/ip2location.fpc
+vi ~/.flowpipe/config/ip2locationio.fpc
 ```
 
 ```hcl
-credential "ip2location" "my_ip2location" {
+credential "ip2locationio" "my_ip2locationio" {
   token = "00B6a...."
 }
 ```
