@@ -1,10 +1,10 @@
-# ip2location.io Library Mod for Flowpipe
+# ip2location.io Mod for Flowpipe
 
 ip2location.io pipeline library for [Flowpipe](https://flowpipe.io) enabling seamless integration of ip2location.io services into your workflows.
 
 ## Documentation
 
-- **[Pipelines →](https://hub.flowpipe.io/mods/turbot/ip2location/pipelines)**
+- **[Pipelines →](https://hub.flowpipe.io/mods/turbot/ip2locationio/pipelines)**
 
 ## Getting started
 
@@ -15,13 +15,6 @@ Download and install Flowpipe (https://flowpipe.io/downloads). Or use Brew:
 ```sh
 brew tap turbot/tap
 brew install flowpipe
-```
-
-Clone:
-
-```sh
-git clone https://github.com/turbot/flowpipe-mod-ip2locationio.git
-cd flowpipe-mod-ip2locationio
 ```
 
 ### Credentials
@@ -38,13 +31,60 @@ vi ~/.flowpipe/config/ip2location.fpc
 
 ```hcl
 credential "ip2location" "my_ip2location" {
-  token = "00B630jSCGU4jV4o5Yh4KQMAdqizwE2OgVcS7N9UHb"
+  token = "00B6a...."
 }
 ```
 
 For more information on credentials in Flowpipe, please see [Managing Credentials](https://flowpipe.io/docs/run/credentials).
 
 ### Usage
+
+[Initialize a mod](https://www.flowpipe.io/docs/mods/index#initializing-a-mod):
+
+```sh
+mkdir my_mod
+cd my_mod
+flowpipe mod init
+```
+
+[Install the ip2location.io mod](https://www.flowpipe.io/docs/mods/mod-dependencies#mod-dependencies) as a dependency:
+
+```sh
+flowpipe mod install github.com/turbot/flowpipe-mod-ip2locationio
+```
+
+[Use the dependency](https://www.flowpipe.io/docs/mods/write-pipelines/index) in a pipeline step:
+
+```sh
+vi my_pipeline.fp
+```
+
+```hcl
+pipeline "my_pipeline" {
+
+  step "pipeline" "get_ip_info" {
+    pipeline = ip2locationio.pipeline.get_ip_info
+    args = {
+      ip_address = "76.76.21.21"
+    }
+  }
+}
+```
+
+[Run the pipeline](https://www.flowpipe.io/docs/run/pipelines):
+
+```sh
+flowpipe pipeline run my_pipeline
+```
+
+### Developing
+
+Clone:
+
+```sh
+git clone https://github.com/turbot/flowpipe-mod-ip2locationio.git
+cd flowpipe-mod-ip2locationio
+```
 
 List pipelines:
 
@@ -58,19 +98,11 @@ Run a pipeline:
 flowpipe pipeline run get_ip_info --arg ip_address='76.76.21.21'
 ```
 
-You can pass in pipeline arguments as well:
-
-```sh
-flowpipe pipeline run get_ip_info --arg ip_address='76.76.21.21'
-```
-
 To use a specific `credential`, specify the `cred` pipeline argument:
 
 ```sh
-flowpipe pipeline run get_ip_info --arg cred=my_ip2location --arg ip_address='76.76.21.21'
+flowpipe pipeline run get_ip_info --arg cred=ip2locationio_profile --arg ip_address='76.76.21.21'
 ```
-
-For more examples on how you can run pipelines, please see [Run Pipelines](https://flowpipe.io/docs/run/pipelines).
 
 ## Open Source & Contributing
 
@@ -85,4 +117,4 @@ This repository is published under the [Apache 2.0 license](https://www.apache.o
 Want to help but not sure where to start? Pick up one of the `help wanted` issues:
 
 - [Flowpipe](https://github.com/turbot/flowpipe/labels/help%20wanted)
-- [IP2locationio Mod](https://github.com/turbot/flowpipe-mod-discord/labels/help%20wanted)
+- [ip2location.io Mod](https://github.com/turbot/flowpipe-mod-ip2locationio/labels/help%20wanted)
