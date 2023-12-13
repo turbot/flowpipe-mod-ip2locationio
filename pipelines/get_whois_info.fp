@@ -19,7 +19,7 @@ pipeline "get_whois_info" {
 
   step "http" "get_whois_info" {
     method = "get"
-    url    = "https://api.ip2whois.com/v2?key=${credential.ip2location[param.cred].api_key}&domain=${param.domain}"
+    url    = "https://api.ip2whois.com/v2?key=${credential.ip2locationio[param.cred].api_key}&domain=${param.domain}"
 
     request_headers = {
       "Content-Type" = "application/json"

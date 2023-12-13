@@ -19,7 +19,7 @@ pipeline "get_ip_info" {
 
   step "http" "get_ip_info" {
     method = "get"
-    url    = "https://api.ip2location.io/?key=${credential.ip2location[param.cred].api_key}&ip=${param.ip_address}"
+    url    = "https://api.ip2location.io/?key=${credential.ip2locationio[param.cred].api_key}&ip=${param.ip_address}"
 
     request_headers = {
       "Content-Type" = "application/json"
