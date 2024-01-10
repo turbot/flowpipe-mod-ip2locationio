@@ -31,7 +31,7 @@ vi ~/.flowpipe/config/ip2locationio.fpc
 
 ```hcl
 credential "ip2locationio" "my_ip2locationio" {
-  token = "00B6a...."
+  api_key = "00B6a...."
 }
 ```
 
