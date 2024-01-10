@@ -1,6 +1,6 @@
 ## v0.2 [2024-01-10]
 
-_Bug Fix_
+_Bug fixes_
 
 - Updated the credential section of README to use `api_key` instead of `token`. ([#7](https://github.com/turbot/flowpipe-mod-ip2locationio/pull/7))
 
