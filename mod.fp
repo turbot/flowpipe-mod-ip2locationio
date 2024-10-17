@@ -4,7 +4,7 @@ mod "ip2locationio" {
   color         = "#535eab"
   documentation = file("./README.md")
   icon          = "/images/mods/turbot/ip2locationio.svg"
-  categories    = ["networking"]
+  categories    = ["library", "networking"]
 
   opengraph {
     title       = "ip2location.io"
