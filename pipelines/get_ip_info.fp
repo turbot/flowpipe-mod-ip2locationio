@@ -3,7 +3,7 @@ pipeline "get_ip_info" {
   description = "Retrieve details of an IP address using IP2Location API."
 
   tags = {
-    type = "featured"
+    recommended = "true"
   }
 
   param "conn" {

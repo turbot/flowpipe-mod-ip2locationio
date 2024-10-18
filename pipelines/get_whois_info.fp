@@ -3,7 +3,7 @@ pipeline "get_whois_info" {
   description = "Retrieve WHOIS information for a domain using ip2whois API."
 
   tags = {
-    type = "featured"
+    recommended = "true"
   }
 
    param "conn" {
