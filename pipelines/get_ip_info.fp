@@ -3,13 +3,13 @@ pipeline "get_ip_info" {
   description = "Retrieve details of an IP address using IP2Location API."
 
   tags = {
-    type = "featured"
+    recommended = "true"
   }
 
-  param "cred" {
-    type        = string
-    description = local.cred_param_description
-    default     = "default"
+  param "conn" {
+    type        = connection.ip2locationio
+    description = local.conn_param_description
+    default     = connection.ip2locationio.default
   }
 
   param "ip_address" {
@@ -19,7 +19,7 @@ pipeline "get_ip_info" {
 
   step "http" "get_ip_info" {
     method = "get"
-    url    = "https://api.ip2location.io/?key=${credential.ip2locationio[param.cred].api_key}&ip=${param.ip_address}"
+    url    = "https://api.ip2location.io/?key=${param.conn.api_key}&ip=${param.ip_address}"
 
     request_headers = {
       "Content-Type" = "application/json"
